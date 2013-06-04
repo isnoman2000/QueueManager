@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Project name</title>
+
+    {% stylesheets
+        '../app/Resources/css/styles.css'
+        '../app/Resources/css/print.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,300,300italic,700italic,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+
+    {% block content %}{% endblock %}
+
+    {% javascripts
+        '../app/Resources/js/jquery-1.8.2.min.js'
+        '../app/Resources/js/jquery.validate.min.js'
+        '../app/Resources/js/underscore-min.js'
+        '../app/Resources/js/app.js'
+        '../app/Resources/js/slider.js'
+        '../app/Resources/js/jquery.formrestrict.js'
+        '../app/Resources/js/jquery.alphanumeric.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    {% block closure %}{% endblock %}
+
+</body>
+</html>

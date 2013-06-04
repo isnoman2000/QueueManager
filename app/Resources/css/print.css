@@ -1,0 +1,16 @@
+@media print{
+    .top-wrapper, .logo,.welcome-text,.completion-steps-holder, .right, .footer-global, .big-gap-holder{
+        display: none;
+    }
+    .container{
+        background: none;
+        border: 0;
+        border-radius: 0;
+    }
+    .rounder-box{
+        background: none;
+        width: 860px;
+        border:0;
+        border-radius: 0;
+    }
+}

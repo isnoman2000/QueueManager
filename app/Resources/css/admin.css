@@ -1,0 +1,38 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.content-gap {
+    margin-right: 20px;
+}
+
+.kit-grid table {
+    width: 100%;
+}
+
+.kit-grid td, .kit-grid th {
+    padding: 10px !important;
+    white-space: nowrap;
+}
+
+.page-title {
+    margin-left: 20px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+#frmSettings .control-label {
+    text-align: left !important;
+}
+
+#frmSettings .control-group {
+    margin-left: 20px;
+}
+
+.admin-nav li a{
+    padding: 10px 10px 10px !important;
+}
