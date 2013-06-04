@@ -12,17 +12,18 @@ Symfony 2.0 Project Bootstrapping
 3. Setup a VirtualHost with the following configuration (modify as needed):
 
     <VirtualHost *:80>
-        
-        ServerName project.symfony.local
-        DocumentRoot "/Users/masud/Sites/personal/SymfonyBootstrap/web"
-        
-        <Directory "/Users/masud/Sites/personal/SymfonyBootstrap/web">
-             Options Indexes FollowSymLinks MultiViews
-             AllowOverride All
-             Allow from All
-        </Directory>
-        
+    ServerName www.queuemanager.local
+    DocumentRoot "/var/www/QueueManager/web"
+    DirectoryIndex app.php
+
+    <Directory "/var/www/QueueManager/web">
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Allow from All
+    </Directory>
     </VirtualHost>
+
+
 
 4. Create a copy of app/config/parameter.yml.dist to app/config/parameter.yml
 
@@ -33,4 +34,19 @@ Symfony 2.0 Project Bootstrapping
     php app/console doctrine:database:create
     chmod -R 0777 app/cache
 
-6. Enjoy!
+7. Routes Queue
+
+    project_core_add_message:
+        pattern:  /message
+        defaults: { _controller: ProjectBundleCoreBundle:Message:addMessage }
+        requirements:
+              _method: POST
+
+
+    project_core_get_message:
+        pattern:  /message
+        defaults: { _controller: ProjectBundleCoreBundle:Message:getMessage }
+        requirements:
+                      _method: GET
+
+8. Enjoy!

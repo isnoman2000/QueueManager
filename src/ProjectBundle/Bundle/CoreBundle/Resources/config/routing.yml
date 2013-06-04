@@ -9,12 +9,3 @@ project_core_get_message:
     pattern:  /message
     defaults: { _controller: ProjectBundleCoreBundle:Message:getMessage }
 
-project_core_save_all:
-    pattern:  /messages
-    defaults: { _controller: ProjectBundleCoreBundle:Message:save }
-    requirements:
-              _method: POST
-
-project_core_get_all:
-    pattern:  /messages
-    defaults: { _controller: ProjectBundleCoreBundle:Message:getAll }
